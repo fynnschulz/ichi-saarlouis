@@ -30,6 +30,10 @@ export default function Home() {
           name="description"
           content="Ichi Restaurant in Saarlouis – Asiatische Spezialitäten, Sushi und All-you-can-eat Buffet."
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
 
       {/* Hintergrund mit Farbverlauf und asiatischem Muster */}
@@ -252,7 +256,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="bg-black/90 backdrop-blur text-gray-300 text-center py-6 mt-10 rounded-t-2xl shadow-inner">
-          <p>© {new Date().getFullYear()} Ichi Restaurant Saarlouis</p>
+          <p>© {new Date().getFullYear()} Ichi Restaurant Saarlouis – Alle Rechte vorbehalten | Designed by FSVisuals</p>
           <div className="mt-2 space-x-4 text-sm">
             <Link href="/impressum" className="hover:text-red-500 transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-red-500 transition-colors">Datenschutz</Link>
