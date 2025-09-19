@@ -194,7 +194,7 @@ export default function Home() {
               className="h-56 w-full object-cover rounded-2xl shadow-inner hover:shadow-xl hover:scale-105 transition-all duration-300"
             />
             <img
-              src="/bild2.jpeg"
+              src="/bild-2.jpeg"
               alt="Impression 2"
               className="h-56 w-full object-cover rounded-2xl shadow-inner hover:shadow-xl hover:scale-105 transition-all duration-300"
             />
