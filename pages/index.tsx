@@ -141,7 +141,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 px-6">
             {[
               { name: "Sushi Variation", desc: "Frisch zubereitet, bunt & vielfältig", img: "/sushi.jpeg" },
-              { name: "Garnelen", desc: "Knackig und frisch zubereitet", img: "/Garnelen.jpeg" },
+              { name: "Garnelen", desc: "Knackig und frisch zubereitet", img: "/garnelen.jpeg" },
               { name: "Frite Sushi", desc: "Knusprig, goldbraun & zart", img: "/frite-sushi.jpeg" },
             ].map((item, i) => (
               <div
