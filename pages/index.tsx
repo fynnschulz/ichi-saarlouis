@@ -37,7 +37,15 @@ export default function Home() {
       </Head>
 
       {/* Hintergrund mit Farbverlauf und asiatischem Muster */}
-      <div className="relative min-h-screen font-serif text-gray-300 overflow-x-hidden">
+      <div
+        className="relative min-h-screen font-serif text-gray-300 overflow-x-hidden"
+        style={{
+          backgroundImage: "url('/holz.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "repeat-y",
+          backgroundPosition: "top center",
+        }}
+      >
         {/* Asiatisches Muster als SVG-Overlay */}
         <div
           className="fixed inset-0 pointer-events-none z-0"
@@ -78,7 +86,7 @@ export default function Home() {
           </div>
         </div>
         {/* Sanfter Hintergrund-Farbverlauf */}
-        <div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
+        {/* <div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black" /> */}
 
         {/* Navbar */}
         <header className="fixed top-0 left-0 w-full bg-black/40 backdrop-blur-md shadow-lg z-50 transition-all">
@@ -116,15 +124,11 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 flex flex-col items-center justify-center w-full">
-            <div className="relative backdrop-blur-xl bg-gradient-to-br from-gray-800 via-gray-900 to-black border border-gray-700/50 rounded-3xl shadow-2xl shadow-black/70 px-12 py-14 text-center">
-              <h2
-                className="text-3xl sm:text-4xl md:text-6xl font-extrabold relative mb-4 drop-shadow-lg"
-              >
-                <span className="block text-transparent bg-clip-text gradient-shine-metal hover:brightness-125 hover:scale-105 transition-transform duration-300">
-                  Willkommen im Ichi
-                </span>
+            <div className="relative backdrop-blur-xl bg-black/40 border border-gray-700/50 rounded-3xl shadow-2xl shadow-black/70 px-12 py-14 text-center">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 text-center fancy-title">
+                Willkommen im Ichi
               </h2>
-              <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-300 font-medium">
+              <p className="text-base sm:text-lg md:text-xl mb-8 text-gold font-medium">
                 Authentische asiatische Küche, Sushi & All-you-can-eat Buffet in Saarlouis.
               </p>
               <Link
@@ -138,8 +142,14 @@ export default function Home() {
         </section>
 
         {/* Menu Section */}
-        <section id="menu" className="py-24 bg-gray-900/50 backdrop-blur-md relative reveal">
-          <h2 className="text-4xl md:text-5xl text-center font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent mb-14 drop-shadow-lg">
+        <section id="menu" className="py-24 bg-black/40 backdrop-blur-md relative reveal">
+          <h2
+            className="text-4xl md:text-5xl text-center font-bold text-[#5a2e0c] mb-14 drop-shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+            style={{
+              textShadow:
+                "2px 2px 4px rgba(0,0,0,0.7), 4px 4px 8px rgba(0,0,0,0.6)"
+            }}
+          >
             Unsere Spezialitäten
           </h2>
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 px-6">
@@ -150,15 +160,21 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg rounded-2xl shadow-lg border border-gray-700/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-7 text-center flex flex-col items-center"
+                className="bg-black/40 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-700/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-7 text-center flex flex-col items-center"
               >
                 <div className="h-40 w-full flex items-center justify-center rounded-xl mb-4 shadow-inner overflow-hidden">
                   <img src={item.img} alt={item.name} className="h-full w-full object-cover" />
                 </div>
-                <h3 className="text-2xl font-semibold bg-gradient-to-r from-red-500 via-amber-500 to-pink-500 bg-clip-text text-transparent mb-2 drop-shadow">
+                <h3
+                  className="text-2xl font-semibold text-[#5a2e0c] mb-2 drop-shadow drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.3), 0 0 8px rgba(90,46,12,0.6), 0 0 15px rgba(0,0,0,0.6), 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(90,46,12,0.7)"
+                  }}
+                >
                   {item.name}
                 </h3>
-                <p className="text-gray-300">{item.desc}</p>
+                <p className="text-gold">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -170,14 +186,20 @@ export default function Home() {
             <img
               src="/drache.png"
               alt="Drache"
-              className="w-[420px] max-w-md opacity-83 mix-blend-screen drop-shadow-[0_0_35px_rgba(255,215,0,0.35)] transform scale-x-100"
+              className="w-[420px] max-w-md opacity-80 mix-blend-screen drop-shadow-[0_0_35px_rgba(255,215,0,0.35)] transform scale-x-100"
             />
           </div>
-          <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg rounded-2xl shadow-lg p-10 transition-all duration-500">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent mb-6 drop-shadow-lg">
+          <div className="bg-black/40 backdrop-blur-lg rounded-2xl shadow-lg p-10 transition-all duration-500">
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#5a2e0c] mb-6 drop-shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+              style={{
+                textShadow:
+                  "2px 2px 4px rgba(0,0,0,0.7), 4px 4px 8px rgba(0,0,0,0.6)"
+              }}
+            >
               Über uns
             </h2>
-            <p className="text-lg leading-relaxed text-gray-300 font-medium">
+            <p className="text-lg leading-relaxed text-gold font-medium">
               Seit vielen Jahren verwöhnen wir unsere Gäste mit einer großen
               Auswahl an asiatischen Köstlichkeiten. Unser Restaurant verbindet
               traditionelle Rezepte mit einem modernen Ambiente. Genießen Sie
@@ -186,9 +208,16 @@ export default function Home() {
           </div>
         </section>
 
+
         {/* Gallery */}
-        <section id="gallery" className="py-24 bg-gray-900/50 backdrop-blur-md relative reveal">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent text-center mb-14 drop-shadow-lg">
+        <section id="gallery" className="pt-10 pb-24 bg-black/40 backdrop-blur-md relative reveal">
+          <h2
+            className="text-4xl md:text-5xl font-bold text-[#5a2e0c] text-center mb-14 drop-shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+            style={{
+              textShadow:
+                "2px 2px 4px rgba(0,0,0,0.7), 4px 4px 8px rgba(0,0,0,0.6)"
+            }}
+          >
             Unser Lokal
           </h2>
           <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
@@ -211,51 +240,79 @@ export default function Home() {
         </section>
 
         {/* Kontakt */}
-        <section id="contact" className="py-24 max-w-5xl mx-auto px-6 reveal">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent text-center mb-14 drop-shadow-lg">
-            Kontakt & Reservierung
-          </h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 transition-all duration-300">
-              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-red-500 via-amber-500 to-pink-500 bg-clip-text text-transparent drop-shadow">
-                Adresse
-              </h3>
-              <p>Silberherzstraße 19</p>
-              <p>66740 Saarlouis</p>
-              <p>Tel: 06831 8936588</p>
-              <p className="mt-4 text-sm text-gray-400">
-                Mo – Sa: 12:00 – 15:00 Uhr | 18:00 – 23:30 Uhr <br />
-                Dienstag: Ruhetag (außer Feiertage)
-              </p>
+        <section
+          id="contact"
+          className="py-24 max-w-5xl mx-auto px-6 reveal relative"
+        >
+          {/* Hintergrund Holz mit runden Kanten */}
+          <div
+            className="absolute inset-0 rounded-3xl overflow-hidden shadow-xl"
+            style={{
+              backgroundImage: "url('/holz.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              boxShadow: "inset 0 0 50px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.5)",
+            }}
+          />
+          <div className="relative z-10">
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#5a2e0c] text-center mb-14 drop-shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+              style={{
+                textShadow:
+                  "2px 2px 4px rgba(0,0,0,0.7), 4px 4px 8px rgba(0,0,0,0.6)"
+              }}
+            >
+              Kontakt 
+            </h2>
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="bg-black/40 backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 transition-all duration-300">
+                <h3
+                  className="text-2xl font-semibold mb-4 text-[#5a2e0c] drop-shadow drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.3), 0 0 8px rgba(90,46,12,0.6), 0 0 15px rgba(0,0,0,0.6), 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(90,46,12,0.7)"
+                  }}
+                >
+                  Adresse
+                </h3>
+                <p>Silberherzstraße 19</p>
+                <p>66740 Saarlouis</p>
+                <p>Tel: 06831 8936588</p>
+                <p className="mt-4 text-sm text-gold">
+                  Mo – Sa: 12:00 – 15:00 Uhr | 18:00 – 23:30 Uhr <br />
+                  Dienstag: Ruhetag (außer Feiertage)
+                </p>
+              </div>
+              <form className="bg-black/40 backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 space-y-5 transition-all duration-300">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gold text-gold transition-all duration-200"
+                />
+                <input
+                  type="email"
+                  placeholder="E-Mail"
+                  className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gold text-gold transition-all duration-200"
+                />
+                <textarea
+                  placeholder="Nachricht"
+                  className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gold text-gold transition-all duration-200"
+                  rows={4}
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-red-500 via-orange-400 to-pink-500 hover:from-pink-600 hover:to-red-500 text-white py-3 rounded-lg font-semibold text-lg shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+                >
+                  Absenden
+                </button>
+              </form>
             </div>
-            <form className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 space-y-5 transition-all duration-300">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
-              />
-              <input
-                type="email"
-                placeholder="E-Mail"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
-              />
-              <textarea
-                placeholder="Nachricht"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
-                rows={4}
-              />
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-red-500 via-orange-400 to-pink-500 hover:from-pink-600 hover:to-red-500 text-white py-3 rounded-lg font-semibold text-lg shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
-              >
-                Absenden
-              </button>
-            </form>
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="bg-black/90 backdrop-blur text-gray-300 text-center py-6 mt-10 rounded-t-2xl shadow-inner">
+        <footer className="bg-black/90 backdrop-blur text-gold text-center py-6 mt-10 rounded-t-2xl shadow-inner">
           <p>© {new Date().getFullYear()} Ichi Restaurant Saarlouis – Alle Rechte vorbehalten | Designed by FSVisuals</p>
           <div className="mt-2 space-x-4 text-sm">
             <Link href="/impressum" className="hover:text-red-500 transition-colors">Impressum</Link>
@@ -264,6 +321,38 @@ export default function Home() {
         </footer>
       </div>
       <style jsx global>{`
+        .fancy-title {
+          position: relative;
+          display: inline-block;
+          color: #5a2e0c;
+          text-shadow:
+            2px 2px 4px rgba(0,0,0,0.6),
+            0 0 10px rgba(139,69,19,0.8),
+            0 0 20px rgba(160,82,45,0.6);
+          animation: glowPulse 3s ease-in-out infinite;
+          letter-spacing: 2px;
+        }
+
+        @keyframes glowPulse {
+          0% {
+            text-shadow:
+              2px 2px 4px rgba(0,0,0,0.6),
+              0 0 8px rgba(48, 23, 5, 0.7),
+              0 0 15px rgba(55, 21, 5, 0.5);
+          }
+          50% {
+            text-shadow:
+              2px 2px 6px rgba(0,0,0,0.7),
+              0 0 15px rgba(38, 15, 4, 0.9),
+              0 0 30px rgba(55, 25, 4, 0.8);
+          }
+          100% {
+            text-shadow:
+              2px 2px 4px rgba(0,0,0,0.6),
+              0 0 8px rgba(32, 15, 2, 0.7),
+              0 0 15px rgba(93, 37, 12, 0.5);
+          }
+        }
         @keyframes gradient-shine {
           0% {
             background-position: 200% center;
@@ -314,6 +403,22 @@ export default function Home() {
         .sparkle {
           animation: floatSpark 4s infinite ease-in-out;
         }
+      .text-gold {
+        background: linear-gradient(90deg, #FFD700, #FFCC33, #FFB700, #FFD700);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: shine 5s linear infinite;
+      }
+      @keyframes shine {
+        0% { background-position: 200% center; }
+        100% { background-position: -200% center; }
+      }
+      .placeholder-gold::placeholder {
+        background: linear-gradient(90deg, #FFD700, #FFCC33, #FFB700, #FFD700);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
       `}</style>
     </>
   );
