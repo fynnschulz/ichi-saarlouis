@@ -253,6 +253,10 @@ export default function Home() {
         {/* Footer */}
         <footer className="bg-black/90 backdrop-blur text-gray-300 text-center py-6 mt-10 rounded-t-2xl shadow-inner">
           <p>© {new Date().getFullYear()} Ichi Restaurant Saarlouis</p>
+          <div className="mt-2 space-x-4 text-sm">
+            <Link href="/impressum" className="hover:text-red-500 transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-red-500 transition-colors">Datenschutz</Link>
+          </div>
         </footer>
       </div>
       <style jsx global>{`
