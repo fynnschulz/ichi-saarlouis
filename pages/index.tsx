@@ -78,13 +78,13 @@ export default function Home() {
 
         {/* Navbar */}
         <header className="fixed top-0 left-0 w-full bg-black/40 backdrop-blur-md shadow-lg z-50 transition-all">
-          <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-2">
+          <div className="max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-6 py-2 flex-wrap">
             <img
               src="/ichi-logo.png"
               alt="Ichi Logo"
               className="h-20 w-auto"
             />
-            <nav className="space-x-8 hidden md:flex">
+            <nav className="space-x-8 hidden md:flex text-sm sm:text-base">
               <a href="#hero" className="hover:text-red-500 transition-colors duration-200">Home</a>
               <Link href="/speisekarte" className="hover:text-red-500 transition-colors duration-200">Speisekarte</Link>
               <a href="#about" className="hover:text-red-500 transition-colors duration-200">Über uns</a>
@@ -114,18 +114,18 @@ export default function Home() {
           <div className="relative z-10 flex flex-col items-center justify-center w-full">
             <div className="relative backdrop-blur-xl bg-gradient-to-br from-gray-800 via-gray-900 to-black border border-gray-700/50 rounded-3xl shadow-2xl shadow-black/70 px-12 py-14 text-center">
               <h2
-                className="text-5xl md:text-6xl font-extrabold relative mb-4 drop-shadow-lg"
+                className="text-3xl sm:text-4xl md:text-6xl font-extrabold relative mb-4 drop-shadow-lg"
               >
                 <span className="block text-transparent bg-clip-text gradient-shine-metal hover:brightness-125 hover:scale-105 transition-transform duration-300">
                   Willkommen im Ichi
                 </span>
               </h2>
-              <p className="text-lg md:text-xl mb-8 text-gray-300 font-medium">
+              <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-300 font-medium">
                 Authentische asiatische Küche, Sushi & All-you-can-eat Buffet in Saarlouis.
               </p>
               <Link
                 href="/speisekarte"
-                className="inline-block px-10 py-4 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 btn-glow-red btn-gradient-animate"
+                className="inline-block px-6 py-3 text-base sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-lg rounded-full text-black font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 btn-glow-red btn-gradient-animate"
               >
                 Speisekarte
               </Link>
@@ -185,7 +185,7 @@ export default function Home() {
         {/* Gallery */}
         <section id="gallery" className="py-24 bg-gray-900/50 backdrop-blur-md relative reveal">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent text-center mb-14 drop-shadow-lg">
-            Ein Einblick
+            Unser Lokal
           </h2>
           <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
             <img
