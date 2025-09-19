@@ -166,7 +166,7 @@ export default function Home() {
             <img
               src="/drache.png"
               alt="Drache"
-              className="w-[420px] max-w-md opacity-80 mix-blend-screen drop-shadow-[0_0_35px_rgba(255,215,0,0.35)] transform scale-x-100"
+              className="w-[420px] max-w-md opacity-83 mix-blend-screen drop-shadow-[0_0_35px_rgba(255,215,0,0.35)] transform scale-x-100"
             />
           </div>
           <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg rounded-2xl shadow-lg p-10 transition-all duration-500">
