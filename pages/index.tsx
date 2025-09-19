@@ -37,7 +37,14 @@ export default function Home() {
       </Head>
 
       {/* Hintergrund mit Farbverlauf und asiatischem Muster */}
-      <div className="relative min-h-screen font-serif text-gray-300 overflow-x-hidden">
+      <div
+        className="relative min-h-screen font-serif text-gray-300 overflow-x-hidden"
+        style={{
+          backgroundImage: "url('/wood-texture.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         {/* Asiatisches Muster als SVG-Overlay */}
         <div
           className="fixed inset-0 pointer-events-none z-0"
@@ -78,10 +85,17 @@ export default function Home() {
           </div>
         </div>
         {/* Sanfter Hintergrund-Farbverlauf */}
-        <div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
+        {/* Wood texture background replaces gradient */}
 
         {/* Navbar */}
-        <header className="fixed top-0 left-0 w-full bg-black/40 backdrop-blur-md shadow-lg z-50 transition-all">
+        <header
+          className="fixed top-0 left-0 w-full shadow-lg z-50 transition-all"
+          style={{
+            backgroundImage: "url('/wood-texture.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-6 py-2 flex-wrap">
             <img
               src="/ichi-logo.png"
@@ -103,7 +117,9 @@ export default function Home() {
           id="hero"
           className="relative min-h-screen flex items-center justify-center bg-cover bg-center reveal"
           style={{
-            backgroundImage: "url('/restaurant-hero.jpg')",
+            backgroundImage: "url('/wood-texture.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           {/* Overlay mit dunklem Farbverlauf und Muster entfernt */}
@@ -116,7 +132,14 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 flex flex-col items-center justify-center w-full">
-            <div className="relative backdrop-blur-xl bg-gradient-to-br from-gray-800 via-gray-900 to-black border border-gray-700/50 rounded-3xl shadow-2xl shadow-black/70 px-12 py-14 text-center">
+            <div
+              className="relative border border-gray-700/50 rounded-3xl shadow-2xl px-12 py-14 text-center"
+              style={{
+                backgroundImage: "url('/wood-texture.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <h2
                 className="text-3xl sm:text-4xl md:text-6xl font-extrabold relative mb-4 drop-shadow-lg"
               >
@@ -138,7 +161,15 @@ export default function Home() {
         </section>
 
         {/* Menu Section */}
-        <section id="menu" className="py-24 bg-gray-900/50 backdrop-blur-md relative reveal">
+        <section
+          id="menu"
+          className="py-24 relative reveal"
+          style={{
+            backgroundImage: "url('/wood-texture.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <h2 className="text-4xl md:text-5xl text-center font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent mb-14 drop-shadow-lg">
             Unsere Spezialitäten
           </h2>
@@ -150,7 +181,12 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg rounded-2xl shadow-lg border border-gray-700/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-7 text-center flex flex-col items-center"
+                className="rounded-2xl shadow-lg border border-gray-700/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 p-7 text-center flex flex-col items-center"
+                style={{
+                  backgroundImage: "url('/wood-texture.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               >
                 <div className="h-40 w-full flex items-center justify-center rounded-xl mb-4 shadow-inner overflow-hidden">
                   <img src={item.img} alt={item.name} className="h-full w-full object-cover" />
@@ -173,7 +209,14 @@ export default function Home() {
               className="w-[420px] max-w-md opacity-83 mix-blend-screen drop-shadow-[0_0_35px_rgba(255,215,0,0.35)] transform scale-x-100"
             />
           </div>
-          <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg rounded-2xl shadow-lg p-10 transition-all duration-500">
+          <div
+            className="rounded-2xl shadow-lg p-10 transition-all duration-500"
+            style={{
+              backgroundImage: "url('/wood-texture.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent mb-6 drop-shadow-lg">
               Über uns
             </h2>
@@ -187,7 +230,15 @@ export default function Home() {
         </section>
 
         {/* Gallery */}
-        <section id="gallery" className="py-24 bg-gray-900/50 backdrop-blur-md relative reveal">
+        <section
+          id="gallery"
+          className="py-24 relative reveal"
+          style={{
+            backgroundImage: "url('/wood-texture.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-600 via-amber-500 to-pink-500 bg-clip-text text-transparent text-center mb-14 drop-shadow-lg">
             Unser Lokal
           </h2>
@@ -216,7 +267,14 @@ export default function Home() {
             Kontakt & Reservierung
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 transition-all duration-300">
+            <div
+              className="p-10 rounded-2xl shadow-lg border border-gray-700/40 transition-all duration-300"
+              style={{
+                backgroundImage: "url('/wood-texture.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-red-500 via-amber-500 to-pink-500 bg-clip-text text-transparent drop-shadow">
                 Adresse
               </h3>
@@ -228,20 +286,27 @@ export default function Home() {
                 Dienstag: Ruhetag (außer Feiertage)
               </p>
             </div>
-            <form className="bg-gradient-to-br from-gray-800 via-gray-900 to-black backdrop-blur-lg p-10 rounded-2xl shadow-lg border border-gray-700/40 space-y-5 transition-all duration-300">
+            <form
+              className="p-10 rounded-2xl shadow-lg border border-gray-700/40 space-y-5 transition-all duration-300"
+              style={{
+                backgroundImage: "url('/wood-texture.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
+                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none placeholder-gray-500 text-gray-300 transition-all duration-200"
               />
               <input
                 type="email"
                 placeholder="E-Mail"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
+                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none placeholder-gray-500 text-gray-300 transition-all duration-200"
               />
               <textarea
                 placeholder="Nachricht"
-                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none bg-black/40 backdrop-blur placeholder-gray-500 text-gray-300 transition-all duration-200"
+                className="w-full px-4 py-3 border border-gray-700/40 rounded-lg focus:border-red-400 outline-none placeholder-gray-500 text-gray-300 transition-all duration-200"
                 rows={4}
               />
               <button
@@ -255,7 +320,14 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-black/90 backdrop-blur text-gray-300 text-center py-6 mt-10 rounded-t-2xl shadow-inner">
+        <footer
+          className="text-gray-300 text-center py-6 mt-10 rounded-t-2xl shadow-inner"
+          style={{
+            backgroundImage: "url('/wood-texture.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <p>© {new Date().getFullYear()} Ichi Restaurant Saarlouis – Alle Rechte vorbehalten | Designed by FSVisuals</p>
           <div className="mt-2 space-x-4 text-sm">
             <Link href="/impressum" className="hover:text-red-500 transition-colors">Impressum</Link>
