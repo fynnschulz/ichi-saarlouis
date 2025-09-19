@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -85,7 +86,7 @@ export default function Home() {
             />
             <nav className="space-x-8 hidden md:flex">
               <a href="#hero" className="hover:text-red-500 transition-colors duration-200">Home</a>
-              <a href="/speisekarte" className="hover:text-red-500 transition-colors duration-200">Speisekarte</a>
+              <Link href="/speisekarte" className="hover:text-red-500 transition-colors duration-200">Speisekarte</Link>
               <a href="#about" className="hover:text-red-500 transition-colors duration-200">Über uns</a>
               <a href="#gallery" className="hover:text-red-500 transition-colors duration-200">Galerie</a>
               <a href="#contact" className="hover:text-red-500 transition-colors duration-200">Kontakt</a>
@@ -122,12 +123,12 @@ export default function Home() {
               <p className="text-lg md:text-xl mb-8 text-gray-300 font-medium">
                 Authentische asiatische Küche, Sushi & All-you-can-eat Buffet in Saarlouis.
               </p>
-              <a
+              <Link
                 href="/speisekarte"
                 className="inline-block px-10 py-4 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 btn-glow-red btn-gradient-animate"
               >
                 Speisekarte
-              </a>
+              </Link>
             </div>
           </div>
         </section>

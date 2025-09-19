@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 export default function Speisekarte() {
   return (
@@ -9,10 +9,12 @@ export default function Speisekarte() {
       {/* Inhalt */}
       <div className="relative z-10 flex flex-col items-center">
         {["/speisekarte1.jpeg", "/speisekarte2.jpeg", "/speisekarte3.jpeg", "/speisekarte4.jpeg"].map((src, i) => (
-          <img
+          <Image
             key={i}
             src={src}
             alt={`Speisekarte ${i + 1}`}
+            width={1200}
+            height={1600}
             className="w-full max-w-5xl object-cover"
           />
         ))}
