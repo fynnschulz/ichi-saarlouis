@@ -133,6 +133,10 @@ export default function Home() {
               >
                 Speisekarte
               </Link>
+
+              <p className="text-white text-2xl sm:text-3xl md:text-4xl mt-8 font-semibold">
+                Tel: 06831 8936588
+              </p>
             </div>
           </div>
         </section>
